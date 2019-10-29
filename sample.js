@@ -1,5 +1,7 @@
 const puppeteer = require("puppeteer");
-(async () => {
+const chalk = require('chalk');
+const sample = async () => {
+  console.log(chalk.yellow("Sample Puppeteer example ====>"))
   const appURL = "https://pankajladhar.github.io/speedy-math/#/";
   const viewPort = { width: 400, height: 600 };
   const browser = await puppeteer.launch({
@@ -13,6 +15,6 @@ const puppeteer = require("puppeteer");
   await page.goto(appURL);
   await page.waitFor(1000);
   await browser.close();
-})();
+}
 
-// sudo codesign -s MyCertificateName -f ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app --deep
+module.exports = sample

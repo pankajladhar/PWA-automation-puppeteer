@@ -1,0 +1,1 @@
+// sudo codesign -s MyCertificateName -f ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app --deep

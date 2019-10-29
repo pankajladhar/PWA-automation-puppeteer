@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 const chalk = require('chalk');
 
-(async () => {
+const diskCaching = async () => {
   console.log(chalk.yellow("Running disk or memory caching...."))
   const appURL = "https://pankajladhar.github.io/speedy-math/#/";
   const viewPort = { width: 400, height: 600 };
@@ -27,4 +27,6 @@ const chalk = require('chalk');
   
   await page.reload({ waitUntil: "networkidle0" });
   await browser.close();
-})();
+}
+
+module.exports = diskCaching

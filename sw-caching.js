@@ -1,7 +1,8 @@
 const puppeteer = require("puppeteer");
 const chalk = require('chalk');
 
-(async () => {
+const swCaching = async () => {
+  console.log(chalk.yellow("Running serviceworker caching...."))
   const appURL = "https://pankajladhar.github.io/speedy-math/#/";
   const viewPort = { width: 400, height: 600 };
   const launchConfig = {
@@ -25,6 +26,8 @@ const chalk = require('chalk');
   
   await page.reload({ waitUntil: "networkidle0" });
   await browser.close();
-})();
+}
+
+module.exports = swCaching
 
 

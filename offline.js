@@ -1,6 +1,7 @@
 const puppeteer = require("puppeteer");
 const chalk = require('chalk');
-(async () => {
+const offline = async () => {
+  console.log(chalk.yellow("Offline Puppeteer example ====>"))
   const appURL = "https://pankajladhar.github.io/speedy-math/#/";
   const viewPort = { width: 400, height: 600 };
   const browser = await puppeteer.launch({
@@ -22,4 +23,6 @@ const chalk = require('chalk');
 
   await page.waitFor(1000);
   await browser.close();
-})();
+}
+
+module.exports = offline
