@@ -1,4 +1,4 @@
-# PWA-automation-puppeteer
+# PWA automation using puppeteer
 
 <p align="center">
   <img width="390" alt="PWA-automation-puppeteer" src="https://github.com/pankajladhar/PWA-automation-puppeteer/blob/master/logo.png">
