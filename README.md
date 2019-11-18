@@ -1,5 +1,9 @@
 # PWA-automation-puppeteer
 
+<p align="center">
+  <img width="390" alt="PWA-automation-puppeteer" src="https://github.com/pankajladhar/PWA-automation-puppeteer/blob/master/logo.png">
+</p>
+
 Puppeteer is a Node library developed by the Chrome DevTools team for testing and automating headless and full Chrome. In this talk, learn how to automate PWA ( Progressive web app) features like service worker registration, offline capability, caching strategies.
 
 ## Collection of programs 
