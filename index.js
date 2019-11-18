@@ -1,8 +1,8 @@
-const sample = require("./sample");
-const offline = require("./offline");
-const swCaching = require("./sw-caching");
-const diskCaching = require("./disk-caching");
-const swRegistration = require("./sw-registration");
+const sample = require("./scripts/sample");
+const offline = require("./scripts/offline");
+const swCaching = require("./scripts/sw-caching");
+const diskCaching = require("./scripts/disk-caching");
+const swRegistration = require("./scripts/sw-registration");
 
 (async () => {
     await sample();
