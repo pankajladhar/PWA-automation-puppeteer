@@ -21,6 +21,10 @@ Puppeteer is a Node library developed by the Chrome DevTools team for testing an
 * [https://medium.com/dev-channel/testing-service-workers-318d7b016b19](https://medium.com/dev-channel/testing-service-workers-318d7b016b19)
 
 
+## Slides
+* [PPT](https://github.com/pankajladhar/PWA-automation-puppeteer/blob/master/slides/PWA-automation-with-Puppeteer.pptx)
+* [PDF](https://github.com/pankajladhar/PWA-automation-puppeteer/blob/master/slides/PWA-automation-with-Puppeteer.pdf)
+
 ## like it?
 ⭐️ this repo
 
