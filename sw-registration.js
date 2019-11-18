@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 const chalk = require('chalk');
-const offline = async () => {
-  console.log(chalk.yellow("Offline Puppeteer example ====>"))
+const sample = async () => {
+  console.log(chalk.yellow("Service worker registration example ====>"))
   const appURL = "https://pankajladhar.github.io/speedy-math/#/";
   const viewPort = { width: 400, height: 600 };
   const browser = await puppeteer.launch({
@@ -13,16 +13,21 @@ const offline = async () => {
   });
   const page = await browser.newPage();
   await page.goto(appURL);
-  await page.evaluate("navigator.serviceWorker.ready"); // wait for sw to become active
-  console.log("Going offline");
-  await page.setOfflineMode(true); // Going offline
-  // page.on('response', r => console.log(r.fromServiceWorker()));
-  await page.reload({waitUntil: 'networkidle0'});
-  const text = await page.$eval(" nner", el => el.innerText);
-  console.log(chalk.green(text));
 
+  const sw = await page.evaluate(() => {
+    return navigator.serviceWorker.getRegistrations().then(registrations => {
+      return registrations && registrations.length > 0 ? true : false;
+    })
+  })
+
+  if(sw){
+    console.log(chalk.green("SW registered Sucessfully"));
+  } else {
+    console.log(chalk.green("SW registration failed !!"));
+  }
+  
   await page.waitFor(1000);
   await browser.close();
 }
 
-module.exports = offline
+module.exports = sample
